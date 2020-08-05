@@ -1,0 +1,5 @@
+C:\Users\Ivan\Desktop\altexsoft-lab-2020\tasks\task1\task1\bin\Debug\task1.exe
+C:\Users\Ivan\Desktop\altexsoft-lab-2020\tasks\task1\task1\bin\Debug\task1.pdb
+C:\Users\Ivan\Desktop\altexsoft-lab-2020\tasks\task1\task1\obj\Debug\task1.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Desktop\altexsoft-lab-2020\tasks\task1\task1\obj\Debug\task1.exe
+C:\Users\Ivan\Desktop\altexsoft-lab-2020\tasks\task1\task1\obj\Debug\task1.pdb
