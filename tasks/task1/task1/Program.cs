@@ -29,18 +29,34 @@ namespace task1
                     Console.WriteLine("There is no word like {0}", word);
             }
             else
-                Console.WriteLine("Something wrong with path ");
+                Console.WriteLine("Something wrong with the path");
         }
 
-        public static void Second()
+        private static void Second()
         {
-            
+            var path = Console.ReadLine();
+            if (path != null)
+            {
+                var fileIn = new StreamReader(path);
+                var pattern = new[] {',', '-', '.', '"', ':', '\t', '!', '?', ' ', '(', ')'};
+                var text = fileIn.ReadToEnd().Split(pattern, StringSplitOptions.RemoveEmptyEntries);
+                Console.WriteLine(text.Length);
+                var comma = new string[text.Length / 10 + 1];
+                for (var i = 0; i < text.Length; i+=10)
+                {
+                    comma[i/10] = text[i];
+                }
+                Console.WriteLine(string.Join(",", comma));
+            }
+            else
+                Console.WriteLine("Something wrong with the path");
         }
 
     public static void Main(string[] args)
         {
             //First();
             //File.Delete("backUp.txt");
+            //Second();
         }
     }
 }
