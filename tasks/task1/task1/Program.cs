@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace task1
 {
@@ -52,11 +53,35 @@ namespace task1
                 Console.WriteLine("Something wrong with the path");
         }
 
+        private static string ReverseWord(string word)
+        {
+            var myArr = word.ToCharArray();
+            Array.Reverse(myArr);
+            return new string(myArr);
+        }
+        private static void Third()
+        {
+            var path = Console.ReadLine();
+            if (path != null)
+            {
+                var fileIn = new StreamReader(path);
+                var text = fileIn.ReadToEnd().Split('.');
+                var subtext = text[2].Split(' ');
+                foreach (var word in subtext)
+                {
+                    Console.Write(ReverseWord(word) + " ");
+                }
+            }
+            else
+                Console.WriteLine("Something wrong with the path");
+        }
+
     public static void Main(string[] args)
         {
             //First();
             //File.Delete("backUp.txt");
             //Second();
+            Third();
         }
     }
 }
